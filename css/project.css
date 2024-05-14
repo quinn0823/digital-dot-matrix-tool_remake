@@ -108,9 +108,15 @@ span {
 #htmlOutput .line div:first-child {
     margin-left: 0;
 }
-.line .off {
-    background-color: #000;
+#htmlOutput .line .off-red {
+    background-color: #ff000040;
 }
-.line .on {
+#htmlOutput .line .on-red {
     background-color: #ff0000;
+}
+#htmlOutput .line .off-yellow {
+    background-color: #ffff0040;
+}
+#htmlOutput .line .on-yellow {
+    background-color: #ffff00;
 }
