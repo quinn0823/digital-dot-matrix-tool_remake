@@ -109,13 +109,13 @@ span {
     margin-left: 0;
 }
 #htmlOutput .line .off-red {
-    background-color: #ff000040;
+    background-color: #ff000020;
 }
 #htmlOutput .line .on-red {
     background-color: #ff0000;
 }
 #htmlOutput .line .off-yellow {
-    background-color: #ffff0040;
+    background-color: #ffff0020;
 }
 #htmlOutput .line .on-yellow {
     background-color: #ffff00;
