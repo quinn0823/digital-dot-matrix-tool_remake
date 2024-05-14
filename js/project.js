@@ -230,9 +230,9 @@ function print() {
         // 每列
         for(var j = 0; j < width; j++) {
             if(ifnull == false && char[i][j] == 1) {
-                lineOutput = lineOutput + "<div class='on'></div>";
+                lineOutput = lineOutput + "<div class='on-red'></div>";
             } else {
-                lineOutput = lineOutput + "<div class='off'></div>";
+                lineOutput = lineOutput + "<div class='off-red'></div>";
             }
         }
         htmlOutput = htmlOutput + "<div class='line'>" + lineOutput + "</div>";
