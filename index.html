@@ -47,8 +47,22 @@
     <input id="widthInput" type="number" onchange="changeWidth()">
     <span>Vertical: </span>
     <input id="hightInput" type="number" value="16" disabled>
+    <span>Color: </span>
+    <div class="sel">
+        <select id="color" onchange="colorChange();">
+            <option value="0">Red</option>
+            <option value="1">Orange</option>
+            <option value="2">Yellow</option>
+            <option value="3">Green</option>
+            <option value="4">Blue</option>
+            <option value="5">Purple</option>
+        </select>
+    </div>
     <hr>
-    <div id="htmlOutput">
+    <div class="screen-out">
+        <div class="screen-in">
+            <div id="htmlOutput"></div>
+        </div>
     </div>
     <div id="footer">
         <div id="update">May 14, 2024</div>
