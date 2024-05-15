@@ -26,10 +26,9 @@
     line-height: 21px;
     text-align: center;
 }
-/* #hightInput {
-    color: #000;
-    background-color: #9cf;
-} */
+#hightInput {
+    border: #000;
+}
 
 #clearButton {
     float: left;
