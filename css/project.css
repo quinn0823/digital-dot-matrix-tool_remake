@@ -2,16 +2,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+/* body {
     background-color: #333;
-}
-input {
+} */
+/* input {
     color: #fff;
     background-color: #333;
-}
-span {
+} */
+/* span {
     color: #fff;
-}
+} */
 
 #numberInput {
     width: calc(100% - 41px);
@@ -26,10 +26,10 @@ span {
     line-height: 21px;
     text-align: center;
 }
-#hightInput {
+/* #hightInput {
     color: #000;
     background-color: #9cf;
-}
+} */
 
 #clearButton {
     float: left;
@@ -39,7 +39,7 @@ span {
     border-radius: 18px;
     width: 36px;
     height: 36px;
-    background-color: #333;
+    /* background-color: #333; */
 }
 .cross{
     width: 30px;
@@ -63,12 +63,13 @@ span {
 .cross .rl{
     transform: rotate(45deg);
 }
-#clearButton:hover {
+/* #clearButton:hover {
     background-color: #69c;
-}
+} */
 #clearButton:hover .cross .lr,
 #clearButton:hover .cross .rl {
-    background-color: #333;
+    /* background-color: #333; */
+    background-color: #fff;
     margin-top: 2.5px;
     height: 25px;
 }
@@ -79,6 +80,48 @@ span {
     transform: rotate(135deg);
 }
 
+.sel {
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+}
+select {
+    margin-left: 0;
+    padding-left: 10.5px;
+    padding-right: 29px;
+    height: 27px;
+    border-radius: 13.5px;
+    border: 3px solid #6699cc;
+    color: #6699cc;
+    background-color: #fff;
+    line-height: 21px;
+    cursor: pointer;
+    appearance: none;
+    display: inline-block;
+    text-align-last:center;
+}
+.sel:after {
+    content:"▼";
+    position: absolute;
+    color: #69c;
+    line-height: 27px;
+    font-size: 14px;
+    right: 10px;
+    text-align: center;
+}
+
+.screen-out {
+    width: calc(100% - 18px - 6px);
+    padding: 6px;
+    border-radius: 18px;
+    background-color: #000;
+    border: #333 6px solid;
+}
+.screen-in {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
 #htmlOutput {
     width: 100%;
     overflow-x: auto;
@@ -114,9 +157,39 @@ span {
 #htmlOutput .line .on-red {
     background-color: #ff0000;
 }
+#htmlOutput .line .off-orange {
+    background-color: #ffa50020;
+}
+#htmlOutput .line .on-orange {
+    background-color: #ffa500;
+}
 #htmlOutput .line .off-yellow {
     background-color: #ffff0020;
 }
 #htmlOutput .line .on-yellow {
     background-color: #ffff00;
+}
+#htmlOutput .line .off-yellow {
+    background-color: #ffff0020;
+}
+#htmlOutput .line .on-yellow {
+    background-color: #ffff00;
+}
+#htmlOutput .line .off-green {
+    background-color: #00800020;
+}
+#htmlOutput .line .on-green {
+    background-color: #008000;
+}
+#htmlOutput .line .off-blue {
+    background-color: #0000ff20;
+}
+#htmlOutput .line .on-blue {
+    background-color: #0000ff;
+}
+#htmlOutput .line .off-purple {
+    background-color: #80008020;
+}
+#htmlOutput .line .on-purple {
+    background-color: #800080;
 }
