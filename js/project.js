@@ -181,6 +181,7 @@ const num = [
     ], //9
 ];
 
+const listColor = ["red", "orange", "yellow", "green", "blue", "purple"]
 // var width = 48;
 // var hight = 16;
 
@@ -193,6 +194,11 @@ var width = horizontal * 16;
 var hight = vertical * 16;
 document.getElementById("widthInput").value = horizontal;document.getElementById("hightInput").value = vertical;
 
+if(localStorage.color == undefined) {
+    localStorage.color = 0;
+}
+
+document.getElementById("color").options[localStorage.color].selected = true;
 
 function mergeChar(charIn) {
     charIn = charIn + "";
@@ -223,6 +229,7 @@ function print() {
     } else {
         var ifnull = true;
     }
+    var colorName = listColor[localStorage.color];
     var htmlOutput = "";
     // 每行
     for(var i = 0; i < hight; i++) {
@@ -230,9 +237,9 @@ function print() {
         // 每列
         for(var j = 0; j < width; j++) {
             if(ifnull == false && char[i][j] == 1) {
-                lineOutput = lineOutput + "<div class='on-red'></div>";
+                lineOutput = lineOutput + "<div class='on-" + colorName + "'></div>";
             } else {
-                lineOutput = lineOutput + "<div class='off-red'></div>";
+                lineOutput = lineOutput + "<div class='off-" + colorName + "'></div>";
             }
         }
         htmlOutput = htmlOutput + "<div class='line'>" + lineOutput + "</div>";
@@ -242,6 +249,9 @@ function print() {
 
 function changeWidth() {
     vertical = document.getElementById("widthInput").value;
+    if(vertical < 0) {
+        vertical = 0;
+    }
     width = Math.round(vertical * 16);
     vertical = width / 16;
     document.getElementById("widthInput").value = vertical
@@ -251,6 +261,11 @@ function changeWidth() {
 
 function clearIn() {
     document.getElementById("numberInput").value = "";
+    print();
+}
+
+function colorChange() {
+    localStorage.color = Number(document.getElementById("color").value);
     print();
 }
 
